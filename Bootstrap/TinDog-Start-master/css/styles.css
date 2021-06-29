@@ -1,0 +1,258 @@
+body{
+  font-family: 'Montserrat';
+  /* once i removed the sans serif extra option the font worked as it should! */
+  text-align: center;
+}
+
+/* sections */
+
+.red-background{
+  background-color: #ff4c68;
+}
+
+.white-background{
+  background-color: #fff;
+}
+
+.blank-background{
+  background-color: inherit;
+}
+
+.orange-background{
+  background-color: #ef8172;
+}
+
+/* selector hierarchy === INLINE CSS (in the html section ie: style="...") > ID > CLASSES > HTEML ELEMENTS */
+
+/* Navigation Bar */
+
+.navbar{
+  padding: 0 0 4.5rem;
+  text-align: left;
+  /* try to minimize on the number of lines you can align to when designing sites, givs a better look */
+}
+
+.navbar-brand{
+  font-family: 'Ubuntu';
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffe;
+}
+
+/* Download Buttons */
+
+.download-button{
+  /* Custom class :) instead of the original Bootstrap class */
+  margin: 25% 3% 5% 0;
+}
+
+/* Title section */
+
+#title{
+  color: #fff; /* #fff=white, #000=black*/
+  text-align: left;
+}
+
+.container-fluid-title{
+  padding: 3% 15% 7%;
+}
+
+.title-h1 {
+  font-size: 4rem;
+  line-height : 1.5;  /*no need for unit*/
+  font-weight: 900;
+}
+
+/*
+"#title .container-fluid{}" === for the container-fluid INSIDE the the '#title' ID
+, do the specifed thing. it will overrider any regular container-fluid class
+because it is more specific. (the space between the selector is very important!)
+.container-fluid #tite === for the title ID thats inside container-fluid.
+you read the hierarchy from right to left!
+
+So child to parent.
+
+if we remove the space i.e h1#title you read from left to right. so every h1 that
+has an ID of title.
+
+So parent to child
+
+ */
+
+/* Title Image */
+
+.title-img{
+  transform: rotate(20deg);
+  padding-left: 60px;
+  position: absolute;
+  /* when set to absolute it finally worked
+  also this one need to not have a z-index so it won't disappear*/
+}
+
+@media (max-width: 1028px) {
+  #title{
+    text-align: center;
+  }
+  .title-img{
+    position: static;
+    transform: rotate(0deg);
+  }
+}
+
+/* Features */
+
+#features{
+  padding: 7% 15%;
+  position: relative;
+  /* also no need for z-index here as well,
+   look at angela's flowchart for an explanation */
+}
+
+.h3-features{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.p-features{
+  color: #8f8f8f;
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.check-circle-icon-Easy, .heart-icon-Guaranteed, .bullseye-icon-Elite{
+  margin: 30px auto 30px;
+}
+
+.fa-check-circle, .fa-heart, .fa-bullseye{
+  color: #ef8172;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-check-circle:hover, .fa-bullseye:hover, .fa-heart:hover{
+  color: #ff4c68;
+}
+
+/* Testimonials */
+
+#testimonials{
+  padding: 0 17%;
+  /* padding gets '0' instead of auto */
+  color: #fff;
+}
+
+.h2-testimonials{
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.img-testimonials{
+  width: 14%;
+  border-radius: 100%;
+  margin-top: 3.5rem;
+}
+
+.carousel-item{
+  padding: 7% 15%;
+}
+
+/* Press */
+
+.press-logos{
+  margin: auto 2rem 4rem 2rem;
+  width: 9%;
+}
+
+/* Pricing */
+
+#pricing{
+  margin: 20px 0 20px 0;
+  font-weight: 900;
+  padding: 80px;
+}
+
+.card{
+  margin-top: 1rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px;
+}
+
+.price-header-h2{
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.price-header-p{
+  font-size: 16px;
+  color: #8f8f8f;
+  padding-top: 1rem;
+}
+
+.pricing-box{
+  padding: 3% 2%;
+}
+
+.pricing-box-h3, .pricing-box-h2{
+  font-weight: 900;
+}
+
+.pricing-box-h2{
+  padding: 5% 0;
+}
+
+.pricing-box-p{
+  color: #8f8f8f;
+}
+
+ /* Call to Action */
+
+#cta{
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.cta-h3{
+  color: #fff;
+  padding: 0 200px 30px;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+.cta-button{
+  margin-top: 20px;
+}
+
+.lower-dwld-icon{
+  padding-right: 10px;
+}
+
+ /* Footer */
+
+ #footer{
+   font-size: 1rem;
+   margin: 100px auto;
+ }
+
+.footer-icon{
+  margin: auto 1.2rem;
+  font-size: 1.4rem;
+}
+
+.copyright-p{
+  padding: 40px 0 10px 0;
+  color: #8f8f8f;
+  font-weight: 500;
+}
